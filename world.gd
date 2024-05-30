@@ -15,8 +15,14 @@ var spawn_radius = 5.0
 @onready var menu = $UI/Pause
 
 func start():
-	for p in particles:
-		spawn_particle(get_point_in_hypersphere(spawn_radius))
+	if $UI/Panel/DualSpawn.pressed:
+		for p in floor(particles / 2.0):
+			spawn_particle(get_point_in_hypersphere(spawn_radius) + Vector4(spawn_radius * 2.0, 0, 0, 0))
+		for p in ceil(particles / 2.0):
+			spawn_particle(get_point_in_hypersphere(spawn_radius) - Vector4(spawn_radius * 2.0, 0, 0, 0))
+	else:
+		for p in particles:
+			spawn_particle(get_point_in_hypersphere(spawn_radius))
 
 func spawn_particle(location: Vector4):
 	var particle = particle_scene.instantiate()

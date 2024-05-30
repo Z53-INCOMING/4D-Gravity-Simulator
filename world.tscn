@@ -61,6 +61,7 @@ max_value = 25.0
 value = 5.0
 
 [node name="Label2" type="Label" parent="UI/Panel"]
+layout_mode = 0
 offset_left = 5.0
 offset_top = 12.0
 offset_right = 122.0
@@ -78,6 +79,7 @@ max_value = 1000.0
 value = 100.0
 
 [node name="Label3" type="Label" parent="UI/Panel"]
+layout_mode = 0
 offset_left = 5.0
 offset_top = 48.0
 offset_right = 122.0
@@ -85,10 +87,11 @@ offset_bottom = 71.0
 text = "Particle Count (100)"
 
 [node name="Label4" type="Label" parent="UI/Panel"]
+layout_mode = 0
 offset_left = 5.0
-offset_top = 108.0
+offset_top = 137.0
 offset_right = 574.0
-offset_bottom = 157.0
+offset_bottom = 472.0
 text = "Particles spawn with zero velocity. To make a big bang sort of thing, set the spawn radius to something small. The smaller the radius, the bigger the explosion and the longer it will take for the particles to collect again.
 
 Keep in mind that rotation in the simulation is about the origin and not the camera. Use right mouse button while looking to rotate the world in 4D. Use A and D to move the camera ana and kata. This position is not affected by 4D rotation.
@@ -97,6 +100,13 @@ More particles will (obviously) lag the simulation more, so I reccomend keeping 
 
 To pull up the settings menu or controls, press escape."
 autowrap_mode = 3
+
+[node name="DualSpawn" type="CheckButton" parent="UI/Panel"]
+layout_mode = 0
+offset_top = 81.0
+offset_right = 255.0
+offset_bottom = 112.0
+text = "Spawn Two Particle Clouds"
 
 [node name="Pause" type="Panel" parent="UI"]
 visible = false
@@ -145,6 +155,7 @@ value = 0.75
 prefix = "Transparency Multiplier:"
 
 [node name="Controls" type="Label" parent="UI/Pause"]
+layout_mode = 0
 offset_left = 4.0
 offset_top = 127.0
 offset_right = 343.0
