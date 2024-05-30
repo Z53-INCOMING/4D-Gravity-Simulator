@@ -115,6 +115,7 @@ min_value = 1.0
 max_value = 15.0
 step = 0.5
 value = 5.0
+allow_greater = true
 prefix = "Hidden Axis Shadow Range:"
 suffix = "units"
 
@@ -128,6 +129,7 @@ min_value = 1.0
 max_value = 15.0
 step = 0.5
 value = 5.0
+allow_greater = true
 prefix = "W Speed:"
 suffix = "u/s"
 
