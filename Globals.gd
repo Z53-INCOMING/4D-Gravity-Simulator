@@ -2,7 +2,7 @@ extends Node
 
 var camera_w = 0.0
 
-var hidden_axis_sight_range = 10.0
+var hidden_axis_sight_range = 5.0
 
 var physics_objects = []
 
