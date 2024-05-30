@@ -3,10 +3,12 @@
 [ext_resource type="Script" path="res://PhysicsObject4D.gd" id="1_7gueg"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gk3tt"]
+resource_local_to_scene = true
 transparency = 1
 albedo_color = Color(0, 0.32549, 1, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4j0yw"]
+resource_local_to_scene = true
 transparency = 1
 albedo_color = Color(1, 0.4534, 0, 0.470588)
 

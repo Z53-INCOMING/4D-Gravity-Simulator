@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dp8sfc6wrr73v"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_cc0ny"]
-[ext_resource type="PackedScene" path="res://advanced_3d_camera.tscn" id="1_vjs6b"]
+[ext_resource type="PackedScene" uid="uid://csoch7a561l7t" path="res://advanced_3d_camera.tscn" id="1_vjs6b"]
 
 [sub_resource type="Environment" id="Environment_dciah"]
 background_mode = 1

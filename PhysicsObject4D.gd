@@ -2,7 +2,7 @@ extends Node3D
 
 @export var world_pos = Vector4.ZERO
 
-@export var radius = 0.5
+@export var radius = 0.5 # warning, not used by sim, just visual
 
 @export var mass = 1.0 # warning, not currently used by gravity sim
 

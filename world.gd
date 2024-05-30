@@ -1,6 +1,6 @@
 extends Node3D
 
-var particles = 1000
+var particles = 100
 
 @onready var particle_scene = preload("res://physics_object_4d.tscn")
 
