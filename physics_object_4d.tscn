@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://glkmfi53uxjp"]
+
+[ext_resource type="Script" path="res://PhysicsObject4D.gd" id="1_7gueg"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gk3tt"]
+transparency = 1
+albedo_color = Color(0, 0.32549, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4j0yw"]
+transparency = 1
+albedo_color = Color(1, 0.4534, 0, 0.470588)
+
+[node name="PhysicsObject4D" type="Node3D"]
+process_mode = 3
+script = ExtResource("1_7gueg")
+
+[node name="Main" type="CSGSphere3D" parent="."]
+radial_segments = 24
+rings = 12
+
+[node name="KataSlice" type="CSGSphere3D" parent="."]
+radius = 0.499
+radial_segments = 24
+rings = 12
+material = SubResource("StandardMaterial3D_gk3tt")
+
+[node name="AnaSlice" type="CSGSphere3D" parent="."]
+radius = 0.499
+radial_segments = 24
+rings = 12
+material = SubResource("StandardMaterial3D_4j0yw")

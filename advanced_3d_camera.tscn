@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://csoch7a561l7t"]
+
+[ext_resource type="Script" path="res://advanced_3d_camera.gd" id="1_i5kvn"]
+
+[node name="Advanced3DCamera" type="Node3D"]
+process_mode = 3
+script = ExtResource("1_i5kvn")
+zoom = 100.0
+movement_allowed = false
+pausing_allowed = false
+resetting_allowed = false
+zoom_near_limit = 5.0
+zoom_far_limit = 200.0
+
+[node name="Pivot" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 0, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Pivot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
+current = true
+fov = 90.0
+size = 2.802
+near = 0.001
