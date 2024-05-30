@@ -10,6 +10,7 @@ ambient_light_color = Color(1, 1, 1, 1)
 ambient_light_energy = 0.25
 
 [node name="World" type="Node3D"]
+process_mode = 3
 script = ExtResource("1_cc0ny")
 
 [node name="Advanced3DCamera" parent="." instance=ExtResource("1_vjs6b")]
@@ -24,3 +25,17 @@ environment = SubResource("Environment_dciah")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.0770497, 0.997027, 0, -0.997027, 0.0770497, 0, 0, 0)
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="UI"]
+visible = false
+offset_right = 40.0
+offset_bottom = 23.0
+text = "FPS: not 165 lol"
+
+[node name="Panel" type="Panel" parent="UI"]
+offset_left = 939.0
+offset_top = 340.0
+offset_right = 1521.0
+offset_bottom = 1015.0

@@ -2,13 +2,17 @@ extends Node
 
 var camera_w = 0.0
 
-var hidden_axis_sight_range = 2.5
+var hidden_axis_sight_range = 10.0
 
 var physics_objects = []
 
 var G = 1.0
 
-var transparency_multiplier = 0.5
+var transparency_multiplier = 0.75
+
+var xw_angle = 0.0
+
+var zw_angle = 0.0
 
 func _physics_process(delta):
 	for p in physics_objects:

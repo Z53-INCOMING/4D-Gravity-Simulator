@@ -89,3 +89,14 @@ func _process(delta):
 		Globals.camera_w -= speed * delta
 	if Input.is_action_pressed("ana"):
 		Globals.camera_w += speed * delta
+	
+	if Input.is_action_just_pressed("4d look"):
+		mouseStart = get_viewport().get_mouse_position()
+	
+	if Input.is_action_pressed("4d look"):
+		var mousePos = get_viewport().get_mouse_position()
+		
+		Globals.xw_angle += ((mousePos - mouseStart).x * mouseSensitivity)
+		Globals.zw_angle += ((mousePos - mouseStart).y * mouseSensitivity)
+		
+		mouseStart = get_viewport().get_mouse_position()
