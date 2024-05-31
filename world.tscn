@@ -19,6 +19,7 @@ metadata/_edit_vertical_guides_ = [1281.0]
 zoom = 20.0
 movement_allowed = true
 pausing_allowed = true
+resetting_allowed = true
 zoom_far_limit = 400.0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -94,7 +95,7 @@ offset_right = 574.0
 offset_bottom = 472.0
 text = "Particles spawn with zero velocity. To make a big bang sort of thing, set the spawn radius to something small. The smaller the radius, the bigger the explosion and the longer it will take for the particles to collect again.
 
-Keep in mind that rotation in the simulation is about the origin and not the camera. Use right mouse button while looking to rotate the world in 4D. Use A and D to move the camera ana and kata. This position is not affected by 4D rotation.
+Use right mouse button while looking to rotate the world in 4D. Use A and D to move the camera ana and kata.
 
 More particles will (obviously) lag the simulation more, so I reccomend keeping the particle count under 500.
 
@@ -164,7 +165,7 @@ MMB/LMB + Move Mouse: Orbit Camera
 RMB + Move Mouse: Rotate World 4D
 A + D: Strafe Camera Ana & Kata
 Scroll Wheel: Zoom
-Space: Pause
+Space: Pause || R: Restart
 Control: Slows Panning/Orbitting
 Shift: Turns Camera Orbitting Into Panning"
 horizontal_alignment = 1

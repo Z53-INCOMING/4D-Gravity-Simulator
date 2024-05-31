@@ -32,3 +32,6 @@ func _physics_process(delta):
 	# movement
 	for p in physics_objects:
 		p.update_position(delta)
+
+func clear():
+	physics_objects = []
