@@ -33,6 +33,9 @@ func _process(delta):
 	if Globals.xw_angle != xw_angle:
 		var angle_change = Globals.xw_angle - xw_angle
 		xw_angle = Globals.xw_angle
+		var camera = get_parent().get_child(0)
+		world_pos.x -= camera.global_position.x
+		world_pos.w -= Globals.camera_w
 		
 		var new_x = (world_pos.x * cos(angle_change)) - (world_pos.w * sin(angle_change))
 		var new_w = (world_pos.x * sin(angle_change)) + (world_pos.w * cos(angle_change))
@@ -40,14 +43,26 @@ func _process(delta):
 		world_pos.x = new_x
 		world_pos.w = new_w
 		
+		world_pos.x += camera.global_position.x
+		world_pos.w += Globals.camera_w
+		
+		past_position.x -= camera.global_position.x
+		past_position.w -= Globals.camera_w
+		
 		var new_x_2 = (past_position.x * cos(angle_change)) - (past_position.w * sin(angle_change))
 		var new_w_2 = (past_position.x * sin(angle_change)) + (past_position.w * cos(angle_change))
 		
 		past_position.x = new_x_2
 		past_position.w = new_w_2
+		
+		past_position.x += camera.global_position.x
+		past_position.w += Globals.camera_w
 	if Globals.zw_angle != zw_angle:
 		var angle_change = Globals.zw_angle - zw_angle
 		zw_angle = Globals.zw_angle
+		var camera = get_parent().get_child(0)
+		world_pos.z -= camera.global_position.z
+		world_pos.w -= Globals.camera_w
 		
 		var new_z = (world_pos.z * cos(angle_change)) - (world_pos.w * sin(angle_change))
 		var new_w = (world_pos.z * sin(angle_change)) + (world_pos.w * cos(angle_change))
@@ -55,11 +70,20 @@ func _process(delta):
 		world_pos.z = new_z
 		world_pos.w = new_w
 		
+		world_pos.z += camera.global_position.z
+		world_pos.w += Globals.camera_w
+		
+		past_position.z -= camera.global_position.z
+		past_position.w -= Globals.camera_w
+		
 		var new_z_2 = (past_position.z * cos(angle_change)) - (past_position.w * sin(angle_change))
 		var new_w_2 = (past_position.z * sin(angle_change)) + (past_position.w * cos(angle_change))
 		
 		past_position.z = new_z_2
 		past_position.w = new_w_2
+		
+		past_position.z += camera.global_position.z
+		past_position.w += Globals.camera_w
 	
 	var slice_dist = get_slice_distance_to_camera()
 	
