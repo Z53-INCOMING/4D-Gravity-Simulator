@@ -37,17 +37,17 @@ offset_bottom = 23.0
 text = "FPS: not 165 lol"
 
 [node name="Panel" type="Panel" parent="UI"]
-offset_left = 994.0
-offset_top = 378.0
-offset_right = 1576.0
-offset_bottom = 1053.0
+offset_left = 991.0
+offset_top = 330.0
+offset_right = 1573.0
+offset_bottom = 1112.0
 
 [node name="Start" type="Button" parent="UI/Panel"]
 layout_mode = 0
 offset_left = 45.0
-offset_top = 489.0
+offset_top = 586.0
 offset_right = 537.0
-offset_bottom = 636.0
+offset_bottom = 733.0
 theme_override_font_sizes/font_size = 64
 text = "Start"
 
@@ -99,7 +99,7 @@ Use right mouse button while looking to rotate the world in 4D. Use A and D to m
 
 More particles will (obviously) lag the simulation more, so I reccomend keeping the particle count under 500.
 
-To pull up the settings menu or controls, press escape."
+To pull up the settings menu or controls, press escape. To enter fullscreen, press F4. Note: fullscreen can mess up recording software, so always be sure to record a 30 second test clip before spending 20 minutes making a video only to find afterward that it was the first frame of the application for the entire 20 minutes. If I sound salty, I am definitely not talking from several times this happened to me."
 autowrap_mode = 3
 
 [node name="DualSpawn" type="CheckButton" parent="UI/Panel"]
@@ -111,10 +111,10 @@ text = "Spawn Two Particle Clouds"
 
 [node name="Pause" type="Panel" parent="UI"]
 visible = false
-offset_left = 1107.0
-offset_top = 523.0
-offset_right = 1450.0
-offset_bottom = 915.0
+offset_left = 1110.0
+offset_top = 514.0
+offset_right = 1453.0
+offset_bottom = 930.0
 
 [node name="HiddenRange" type="SpinBox" parent="UI/Pause"]
 layout_mode = 0
@@ -169,7 +169,8 @@ Space: Pause || R: Restart
 Control: Slows Panning/Orbitting
 Shift: Turns Camera Orbitting Into Panning
 F: Start/Stop Following
-Up/Down Arrow: Cycle Particle To Follow"
+Up/Down Arrow: Cycle Particle To Follow
+F4: Fullscreen Toggle"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
